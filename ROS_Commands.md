@@ -29,3 +29,13 @@ rostopic info topic_name
 ```
 rostopic echo topic_name
 ```
+
+## Running nodes
+### Running a single node
+```
+rosrun package_name node_name.py
+```
+### Running a launch file
+```
+roslaunch package_name launch_file.launch
+```
