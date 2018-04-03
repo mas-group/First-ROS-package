@@ -26,10 +26,10 @@ class PoseController:
 		self.target_vel = Twist()
 
 		# Create subscriber for pose from turtle
-		self.vel_sub = rospy.Subscriber("turtle1/pose", Pose, self.current_pose_callback)
+		self.current_pose_sub = rospy.Subscriber("turtle1/pose", Pose, self.current_pose_callback)
 
 		# Create subscriber for pose from keyboard
-		self.vel_sub = rospy.Subscriber("turtle_controller/pose", Pose, self.target_pose_callback)
+		self.target_pose_sub = rospy.Subscriber("turtle_controller/pose", Pose, self.target_pose_callback)
 
 		# Create publisher for velocity
 		self.target_vel_pub = rospy.Publisher("turtle1/cmd_vel", Twist, queue_size = 10)
